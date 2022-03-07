@@ -31,7 +31,7 @@ function App() {
   const addTodo = (title, desc) => {
     let sr;
     console.log("Todo Added", title, desc);
-    if (todos.length == 0) {
+    if (todos.length === 0) {
       sr = 0;
     }
     else {
@@ -56,10 +56,11 @@ function App() {
       <Router>
         <Header title="My Todos List" searchBar={false} />
         <Switch>
+        <AddTodo addTodo={addTodo} />
           <Route exact path="/" render={() => {
             return (
               <>
-                <AddTodo addTodo={addTodo} />
+               
                 <Todos todos={todos} onDelete={onDelete} />
               </>)
           }}>
