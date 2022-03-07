@@ -56,11 +56,11 @@ function App() {
       <Router>
         <Header title="My Todos List" searchBar={false} />
         <Switch>
-        <AddTodo addTodo={addTodo} />
+        
           <Route exact path="/" render={() => {
             return (
               <>
-               
+                <AddTodo addTodo={addTodo} />
                 <Todos todos={todos} onDelete={onDelete} />
               </>)
           }}>
